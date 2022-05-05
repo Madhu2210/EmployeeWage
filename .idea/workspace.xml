@@ -4,6 +4,8 @@
     <list default="true" id="0bf34b21-15fa-4029-bf37-c23d030802d1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/bridglabz/emp/CompanyEmpWage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/bridglabz/emp/CompanyEmpWage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/bridglabz/emp/EmpWage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/bridglabz/emp/EmpWage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/bridglabz/emp/IComputeEmpWage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/bridglabz/emp/IComputeEmpWage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

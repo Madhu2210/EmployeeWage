@@ -17,10 +17,13 @@ public class EmpWage implements IComputeEmpWage {
         empWageBuilder.addCompanyEmpWage("TCS", 20, 4, 10);
         empWageBuilder.addCompanyEmpWage("INTEL", 20, 14, 20);
         empWageBuilder.computeEmpWageFromArray();
+        System.out.println(" Total Wage " +empWageBuilder. getTotalEmpWage("INTEL"));
+
     }
 
     private int computeEmpWage(CompanyEmpWage companyEmpWage) {
         int totalEmpHours = 0, totalWorkingDays = 0, workingHours = 0;
+        int index = 0;
         while (totalEmpHours < companyEmpWage.maxHrsInMonth && totalWorkingDays < companyEmpWage.numMaxWorkingDay) {
             totalWorkingDays++;
             double empCheck = Math.floor(Math.random() * 10) % 3;
@@ -36,6 +39,7 @@ public class EmpWage implements IComputeEmpWage {
                     workingHours = 0;
             }
             totalEmpHours += workingHours;
+            companyEmpWage.perDayWage[totalWorkingDays] = workingHours * companyEmpWage .empWagePerHr;
             totalWorkingDays++;
         }
         return totalEmpHours * companyEmpWage.empWagePerHr;
@@ -54,5 +58,15 @@ public class EmpWage implements IComputeEmpWage {
             companyEmpWageList.get(i).totalEmpWage = totalWage;
             System.out.println(companyEmpWageList.get(i));
         }
+    }
+
+    @Override
+    public int getTotalEmpWage(String companyName) {
+        for (int i = 0; i < companyEmpWageList.size(); i++){
+            if (companyEmpWageList.get(i).companyName.equals(companyName)){
+                return companyEmpWageList.get(i) .totalEmpWage;
+            }
+        }
+        return  0 ;
     }
 }
