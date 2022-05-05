@@ -1,11 +1,15 @@
 package com.bridglabz.emp;
 
+import java.util.Arrays;
+
 public class CompanyEmpWage {
     public  String companyName;
     public  int empWagePerHr;
     public  int numMaxWorkingDay;
     public  int maxHrsInMonth;
     public  int totalEmpWage;
+    public int[] perDayWage;
+
 
     // Constructor
     public CompanyEmpWage(String companyName, int empWagePerHr, int numMaxWorkingDay, int maxHrsInMonth) {
@@ -13,6 +17,8 @@ public class CompanyEmpWage {
         this.empWagePerHr = empWagePerHr;
         this.numMaxWorkingDay = numMaxWorkingDay;
         this.maxHrsInMonth = maxHrsInMonth;
+        this. perDayWage = new int[numMaxWorkingDay];
+
     }
 
     @Override
@@ -23,6 +29,7 @@ public class CompanyEmpWage {
                 ", numMaxWorkingDay=" + numMaxWorkingDay +
                 ", maxHrsInMonth=" + maxHrsInMonth +
                 ", totalEmpWage=" + totalEmpWage +
+                ", perDayWage=" + Arrays.toString(perDayWage) +
                 '}';
     }
 }
